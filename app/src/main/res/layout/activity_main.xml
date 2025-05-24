@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root"
+    android:background="#2C2C2C"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:layout_weight="1.3"
+        android:orientation="vertical"
+        android:padding="4dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/bankBalanceValue3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:drawableRight="@drawable/ic_arrow_right"
+                android:drawablePadding="12dp"
+                android:text="check"
+                android:textColor="#FBFBFB"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/bankBalanceLabel3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/bankBalanceLabel3"
+                app:layout_constraintTop_toTopOf="@+id/bankBalanceLabel3" />
+
+            <TextView
+                android:id="@+id/bankBalanceLabel3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/profile_picture"
+                android:drawablePadding="6dp"
+                android:text="bank balance"
+                android:textColor="#AAAAAA"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/bankBalanceValue3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/view11"
+                app:layout_constraintTop_toBottomOf="@+id/lifetimeCashbackLabel3" />
+
+            <View
+                android:id="@+id/view11"
+                android:layout_width="0dp"
+                android:layout_height="1.5dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="#555555"
+                app:layout_constraintBottom_toTopOf="@+id/bankBalanceLabel3"
+                app:layout_constraintEnd_toEndOf="@+id/view9"
+                app:layout_constraintStart_toStartOf="@+id/lifetimeCashbackLabel3"
+                app:layout_constraintTop_toBottomOf="@+id/lifetimeCashbackLabel3" />
+
+            <TextView
+                android:id="@+id/lifetimeCashbackValue3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:drawableRight="@drawable/ic_arrow_right"
+                android:drawablePadding="12dp"
+                android:text="₹3"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/lifetimeCashbackLabel3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/lifetimeCashbackLabel3"
+                app:layout_constraintTop_toTopOf="@+id/lifetimeCashbackLabel3" />
+
+            <TextView
+                android:id="@+id/lifetimeCashbackLabel3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="15dp"
+                android:drawablePadding="6dp"
+                android:text="lifetime cashback"
+                android:textColor="#AAAAAA"
+                android:textSize="14sp"
+                app:drawableLeftCompat="@drawable/ic_rupee"
+                app:layout_constraintBottom_toTopOf="@+id/view11"
+                app:layout_constraintEnd_toStartOf="@+id/lifetimeCashbackValue3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="@+id/view9"
+                app:layout_constraintTop_toBottomOf="@+id/view9" />
+
+            <View
+                android:id="@+id/view9"
+                android:layout_width="0dp"
+                android:layout_height="1.5dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="#555555"
+                app:layout_constraintBottom_toTopOf="@+id/lifetimeCashbackLabel3"
+                app:layout_constraintEnd_toEndOf="@+id/creditScoreValue3"
+                app:layout_constraintStart_toStartOf="@+id/creditScoreLabel3"
+                app:layout_constraintTop_toBottomOf="@+id/creditScoreLabel3" />
+
+            <TextView
+                android:id="@+id/creditScoreValue3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:drawableRight="@drawable/ic_arrow_right"
+                android:drawablePadding="12dp"
+                android:text="757"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/creditScoreLabel3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/creditScoreLabel3"
+                app:layout_constraintTop_toTopOf="@+id/creditScoreLabel3" />
+
+            <TextView
+                android:id="@+id/creditScoreLabel3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="6dp"
+                android:drawableLeft="@drawable/profile_picture"
+                android:drawablePadding="6dp"
+                android:text="credit score • REFRESH AVAILABLE"
+                android:textColor="#00FF66"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/view9"
+                app:layout_constraintEnd_toStartOf="@+id/creditScoreValue3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view7" />
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/profile_circle_background"
+                android:contentDescription="TODO"
+                android:padding="14dp"
+                app:layout_constraintBottom_toBottomOf="@+id/memberSince3"
+                app:layout_constraintEnd_toEndOf="@+id/supportButton3"
+                app:layout_constraintHorizontal_bias="0.93"
+                app:layout_constraintStart_toStartOf="@+id/supportButton3"
+                app:layout_constraintTop_toTopOf="@+id/userName3"
+                app:srcCompat="@drawable/pencil" />
+
+            <TextView
+                android:id="@+id/memberSince3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:text="member since Dec, 2020"
+                android:textColor="#AAAAAA"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/profileImage3"
+                app:layout_constraintStart_toEndOf="@+id/profileImage3"
+                app:layout_constraintTop_toBottomOf="@+id/userName3" />
+
+            <TextView
+                android:id="@+id/userName3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:fontFamily="sans-serif-thin"
+                android:text="andaz Kumar"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/memberSince3"
+                app:layout_constraintStart_toEndOf="@+id/profileImage3"
+                app:layout_constraintTop_toTopOf="@+id/profileImage3" />
+
+            <ImageView
+                android:id="@+id/profileImage3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/profile_circle_background"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile_picture"
+
+                app:layout_constraintStart_toStartOf="@+id/backIcon4"
+                app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginBottom="4dp"
+                app:layout_constraintBottom_toTopOf="@+id/profileImage3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/supportButton3" />
+
+            <Button
+                android:id="@+id/supportButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_margin="1dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="#070707"
+                android:drawableLeft="@drawable/baseline_chat_24"
+                android:text="support"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toTopOf="@+id/imageButton2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.94"
+                app:layout_constraintStart_toEndOf="@+id/textView2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="Profile"
+                android:textColor="#F6F6F6"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/profileImage3"
+                app:layout_constraintStart_toEndOf="@+id/backIcon4"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/backIcon4"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="8dp"
+                android:paddingRight="4dp"
+                android:src="@drawable/ic_back"
+                app:layout_constraintBottom_toTopOf="@+id/profileImage3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="#FFFFFF" />
+
+            <View
+                android:id="@+id/view7"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:background="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profileImage3" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_marginStart="2dp"
+                android:drawablePadding="16dp"
+                android:text="CRED garage"
+                android:textColor="#00FFAA"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:drawableRightCompat="@drawable/ic_arrow_right"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_marginStart="2dp"
+                android:text="get to know your vehicles, inside out"
+                android:textColor="#CCCCCC"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView4"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/profile_circle_background"
+                android:padding="10dp"
+                android:src="@drawable/ic_car"
+                app:layout_constraintBottom_toBottomOf="@+id/view7"
+                app:layout_constraintStart_toStartOf="@+id/view7"
+                app:layout_constraintTop_toTopOf="@+id/view7"
+                app:tint="#FFFFFF" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:layout_weight="1"
+        android:background="#000000"
+        android:orientation="vertical"
+        android:paddingLeft="8dp"
+        android:paddingTop="4dp"
+        android:paddingRight="8dp"
+        android:weightSum="2"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <TextView
+            android:id="@+id/rewardsHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="2dp"
+            android:padding="6dp"
+            android:text="YOUR REWARDS &amp; BENEFITS"
+            android:textColor="#888888"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/cashbackBalance"
+            app:layout_constraintStart_toStartOf="@+id/bankBalanceLabel"
+            app:layout_constraintTop_toBottomOf="@+id/bankBalanceLabel"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <TextView
+            android:id="@+id/cashbackBalance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="4dp"
+            android:padding="6dp"
+            android:text="cashback balance\n₹0"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:drawableRightCompat="@drawable/right_arrow"
+            app:layout_constraintBottom_toTopOf="@+id/coins"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rewardsHeader"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#555555" />
+
+        <TextView
+            android:id="@+id/coins"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:padding="6dp"
+            android:text="coins\n26,46,583"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:drawableRightCompat="@drawable/right_arrow"
+            app:layout_constraintBottom_toTopOf="@+id/view2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cashbackBalance"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#555555" />
+
+        <TextView
+            android:id="@+id/referEarn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:padding="6dp"
+            android:text="win upto Rs 1000\nrefer and earn"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:drawableRightCompat="@drawable/right_arrow"
+            app:layout_constraintBottom_toTopOf="@+id/transactionHeader"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view2"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <TextView
+            android:id="@+id/transactionHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="6dp"
+            android:text="TRANSACTIONS &amp; SUPPORT"
+            android:textColor="#888888"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/allTransactions"
+            app:layout_constraintStart_toStartOf="@+id/referEarn"
+            app:layout_constraintTop_toBottomOf="@+id/referEarn"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <TextView
+            android:id="@+id/allTransactions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:text="all transactions"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:drawableRightCompat="@drawable/right_arrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/transactionHeader"
+            app:layout_constraintTop_toBottomOf="@+id/transactionHeader"
+            app:layout_constraintVertical_bias="0.5" />
+    </LinearLayout>
+</LinearLayout>
