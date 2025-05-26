@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#181818"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".ProfileActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -39,7 +39,6 @@
                         android:id="@+id/bankBalanceValue3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="10dp"
                         android:drawablePadding="12dp"
                         android:fontFamily="@font/manrope_medium"
                         android:gravity="center_vertical"
@@ -48,7 +47,7 @@
                         android:textSize="16sp"
                         app:drawableEndCompat="@drawable/ic_right_arrow_long"
                         app:layout_constraintBottom_toBottomOf="@+id/bankBalanceLabel3"
-                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/view11"
                         app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toEndOf="@+id/bankBalanceLabel3"
                         app:layout_constraintTop_toTopOf="@+id/bankBalanceLabel3" />
@@ -85,7 +84,6 @@
                         android:id="@+id/lifetimeCashbackValue3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="10dp"
                         android:drawablePadding="12dp"
                         android:fontFamily="@font/manrope_medium"
                         android:gravity="center_vertical"
@@ -94,7 +92,7 @@
                         android:textSize="16sp"
                         app:drawableEndCompat="@drawable/ic_right_arrow_long"
                         app:layout_constraintBottom_toBottomOf="@+id/lifetimeCashbackLabel3"
-                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/view9"
                         app:layout_constraintStart_toEndOf="@+id/lifetimeCashbackLabel3"
                         app:layout_constraintTop_toTopOf="@+id/lifetimeCashbackLabel3" />
 
@@ -134,7 +132,6 @@
                         android:id="@+id/creditScoreValue3"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
-                        android:layout_marginStart="@dimen/margin_15"
                         android:drawablePadding="12dp"
                         android:fontFamily="@font/manrope_medium"
                         android:gravity="center_vertical|end"
@@ -152,7 +149,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"
-                        android:layout_marginEnd="1dp"
                         android:layout_marginBottom="6dp"
                         android:drawablePadding="6dp"
                         android:fontFamily="@font/manrope"
@@ -212,8 +208,8 @@
 
                     <ImageView
                         android:id="@+id/profileImage3"
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
+                        android:layout_width="62dp"
+                        android:layout_height="62dp"
                         android:layout_marginTop="14dp"
                         android:layout_marginEnd="2dp"
                         android:background="@drawable/profile_circle_background"
@@ -301,6 +297,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="14dp"
+                        android:layout_marginTop="4dp"
                         android:drawablePadding="16dp"
                         android:fontFamily="@font/manrope_medium"
                         android:gravity="center_vertical"
@@ -350,6 +347,7 @@
                         android:padding="6dp"
                         android:text="@string/refresh_available"
                         android:textColor="#00D541"
+                        android:textSize="12sp"
                         app:layout_constraintBottom_toBottomOf="@+id/creditScoreLabel3"
                         app:layout_constraintEnd_toStartOf="@+id/creditScoreValue3"
                         app:layout_constraintStart_toEndOf="@+id/creditScoreLabel3"
