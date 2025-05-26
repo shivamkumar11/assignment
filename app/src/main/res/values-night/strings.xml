@@ -1,7 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Assignment</string>
-    <!-- res/values/strings.xml -->
-    <string name="cashback_balance_html">cashback balance<br/><font color='#FF0000'>₹0</font></string>
     <string name="_757">757</string>
     <string name="credit_score">credit score</string>
     <string name="support">support</string>
@@ -25,12 +23,8 @@
     <string name="member_since_dec_2020">member since Dec, 2020</string>
     <string name="todoss">TODO</string>
     <string name="profile">Profile</string>
-    <string name="to">TODO</string>
-    <string name="nulls">null</string>
     <string name="todoab">TODO</string>
     <string name="coins">coins</string>
     <string name="transactions_amp_support"><![CDATA[TRANSACTIONS & SUPPORT]]></string>
     <string name="all_transactions">all transactions</string>
-
-
 </resources>
