@@ -1,0 +1,24 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="1024"
+    android:viewportHeight="1024">
+
+    <!-- Outer circle with stroke -->
+    <path
+        android:pathData="M512,64 A448,448 0 1,1 511.9,64"
+        android:strokeColor="#909090"
+        android:strokeWidth="22"
+        android:fillColor="@android:color/transparent"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+    <!-- Inner circular icon -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M513,660.9c-83.1,0 -150.8,-67.6 -150.8,-150.8S429.9,359.3 513,359.3 663.8,427 663.8,510.1 596.1,660.9 513,660.9zM513,448.6c-33.9,0 -61.5,27.6 -61.5,61.5s27.6,61.5 61.5,61.5 61.5,-27.6 61.5,-61.5 -27.6,-61.5 -61.5,-61.5z"/>
+
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M587.1,480.6c-11.4,0 -22.8,-4.4 -31.6,-13.1 -17.4,-17.4 -17.4,-45.7 0,-63.1l118,-118c17.4,-17.4 45.7,-17.4 63.1,0s17.4,45.7 0,63.1l-118,118c-8.6,8.8 -20.1,13.1 -31.5,13.1z"/>
+</vector>

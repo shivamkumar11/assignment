@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Assignment</string>
+    <!-- res/values/strings.xml -->
+    <string name="cashback_balance_html">cashback balance<br/><font color='#FF0000'>₹0</font></string>
+
+
 </resources>

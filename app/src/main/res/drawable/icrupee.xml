@@ -1,0 +1,29 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+  <!-- Circle Outline (no fill) -->
+  <path
+      android:pathData="M12,1A11,11 0 1,0 12,23A11,11 0 1,0 12,1Z"
+      android:strokeColor="#909090"
+      android:strokeWidth=".8"
+      android:fillColor="#00000000"
+      android:strokeAlpha="0.6"/>
+
+  <!-- Icon (Centered and Scaled) -->
+  <group
+      android:scaleX="0.70"
+      android:scaleY="0.70"
+      android:translateX="6.6"
+      android:translateY="5.3">
+    <path
+        android:pathData="M8.949,2.654H11.902L12.983,1.08H1.881L0.8,2.654H2.673C4.618,2.654 6.419,2.788 7.14,4.386H1.881L0.8,5.961H7.356V6.031C7.356,7.204 6.347,9.007 3.034,9.007H1.377V10.535L7.86,18.36H10.822L4.042,10.259C6.852,10.117 9.453,8.59 9.813,5.961H11.902L12.983,4.386H9.741C9.662,3.743 9.385,3.139 8.949,2.654Z"
+        android:fillColor="#FFFFFF"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="0.1"
+        android:strokeLineJoin="round"
+        android:strokeLineCap="round" />
+  </group>
+</vector>
