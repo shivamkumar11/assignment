@@ -21,7 +21,7 @@ public class ProfileActivity extends AppCompatActivity {
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.setStatusBarColor(ContextCompat.getColor(this, R.color.my_status_bar_color));
-        shimmerFrameLayout = findViewById(R.id.view7);
+
 
         Shimmer shimmer = new Shimmer.ColorHighlightBuilder()
                 .setBaseColor(0x000000)
@@ -34,9 +34,9 @@ public class ProfileActivity extends AppCompatActivity {
                 .setRepeatCount(0)
                 .build();
 
-        ShimmerFrameLayout shimmerCredit = findViewById(R.id.view7);
-        shimmerCredit.setShimmer(shimmer);
-        shimmerCredit.startShimmer();
+        shimmerFrameLayout = findViewById(R.id.view7);
+        shimmerFrameLayout.setShimmer(shimmer);
+        shimmerFrameLayout.startShimmer();
     }
 
     @Override
