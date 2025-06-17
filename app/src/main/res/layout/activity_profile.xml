@@ -7,19 +7,8 @@
     android:layout_height="match_parent"
     android:background="#181818"
     android:orientation="vertical"
+    android:paddingTop="@dimen/padding_4"
     tools:context=".ProfileActivity">
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true"
-        tools:ignore="UselessParent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingTop="@dimen/padding_4">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -280,13 +269,13 @@
                         app:tint="#FFFFFF"
                         tools:ignore="RtlSymmetry" />
 
-                    <View
+                    <com.facebook.shimmer.ShimmerFrameLayout
                         android:id="@+id/view7"
                         android:layout_width="0dp"
-                        android:layout_height="80dp"
+                        android:layout_height="84dp"
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="8dp"
-                        android:background="@drawable/rectangle_stroke"
+                        android:background="@color/black"
                         app:layout_constraintBottom_toTopOf="@+id/creditScoreValue3"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="@+id/profileImage3"
@@ -356,245 +345,244 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#000000"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/padding_8"
+        android:paddingTop="6dp"
+        android:paddingRight="@dimen/padding_8"
+        android:weightSum="2"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
                 android:layout_height="0dp"
-                android:layout_weight="1"
-                android:background="#000000"
-                android:orientation="vertical"
-                android:paddingLeft="@dimen/padding_8"
-                android:paddingTop="6dp"
-                android:paddingRight="@dimen/padding_8"
-                android:weightSum="2"
-                tools:layout_editor_absoluteX="1dp"
-                tools:layout_editor_absoluteY="1dp">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                android:contentDescription="@string/todoab"
+                app:layout_constraintBottom_toBottomOf="@+id/textView7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView7"
+                app:layout_constraintTop_toTopOf="@+id/referEarn"
+                app:srcCompat="@drawable/right_arrow" />
 
-                    <ImageView
-                        android:id="@+id/imageView4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="0dp"
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/manrope_medium"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/padding_6"
+                android:paddingTop="1dp"
+                android:paddingBottom="@dimen/padding_4"
+                android:text="@string/_26_46_5834"
+                android:textColor="#AFAFAF"
+                app:layout_constraintBottom_toTopOf="@+id/transactionHeader"
+                app:layout_constraintEnd_toStartOf="@+id/imageView4"
+                app:layout_constraintStart_toStartOf="@+id/referEarn"
+                app:layout_constraintTop_toBottomOf="@+id/referEarn"
+                tools:ignore="RtlSymmetry" />
 
-                        android:contentDescription="@string/todoab"
-                        app:layout_constraintBottom_toBottomOf="@+id/textView7"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/textView7"
-                        app:layout_constraintTop_toTopOf="@+id/referEarn"
-                        app:srcCompat="@drawable/right_arrow" />
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/manrope_medium"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/padding_6"
+                android:paddingTop="1dp"
+                android:paddingBottom="@dimen/padding_4"
+                android:text="@string/_26_46_583"
+                android:textColor="#AFAFAF"
+                app:layout_constraintBottom_toTopOf="@+id/view2"
+                app:layout_constraintEnd_toStartOf="@+id/imageView3"
+                app:layout_constraintStart_toStartOf="@+id/coins"
+                app:layout_constraintTop_toBottomOf="@+id/coins"
+                tools:ignore="RtlSymmetry" />
 
-                    <TextView
-                        android:id="@+id/textView7"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:fontFamily="@font/manrope_medium"
-                        android:gravity="center_vertical"
-                        android:paddingStart="@dimen/padding_6"
-                        android:paddingTop="1dp"
-                        android:paddingBottom="@dimen/padding_4"
-                        android:text="@string/_26_46_5834"
-                        android:textColor="#AFAFAF"
-                        app:layout_constraintBottom_toTopOf="@+id/transactionHeader"
-                        app:layout_constraintEnd_toStartOf="@+id/imageView4"
-                        app:layout_constraintStart_toStartOf="@+id/referEarn"
-                        app:layout_constraintTop_toBottomOf="@+id/referEarn"
-                        tools:ignore="RtlSymmetry" />
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:contentDescription="@string/todos"
+                app:layout_constraintBottom_toBottomOf="@+id/textView6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView6"
+                app:layout_constraintTop_toTopOf="@+id/coins"
+                app:srcCompat="@drawable/right_arrow" />
 
-                    <TextView
-                        android:id="@+id/textView6"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:fontFamily="@font/manrope_medium"
-                        android:gravity="center_vertical"
-                        android:paddingStart="@dimen/padding_6"
-                        android:paddingTop="1dp"
-                        android:paddingBottom="@dimen/padding_4"
-                        android:text="@string/_26_46_583"
-                        android:textColor="#AFAFAF"
-                        app:layout_constraintBottom_toTopOf="@+id/view2"
-                        app:layout_constraintEnd_toStartOf="@+id/imageView3"
-                        app:layout_constraintStart_toStartOf="@+id/coins"
-                        app:layout_constraintTop_toBottomOf="@+id/coins"
-                        tools:ignore="RtlSymmetry" />
+            <TextView
+                android:id="@+id/rewardsHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="2dp"
+                android:fontFamily="@font/manrope_semibold"
+                android:padding="@dimen/padding_6"
+                android:text="@string/your_rewards_amp_benefits"
+                android:textColor="#888888"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/cashbackBalance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                    <ImageView
-                        android:id="@+id/imageView3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="0dp"
-                        android:contentDescription="@string/todos"
-                        app:layout_constraintBottom_toBottomOf="@+id/textView6"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/textView6"
-                        app:layout_constraintTop_toTopOf="@+id/coins"
-                        app:srcCompat="@drawable/right_arrow" />
+            <TextView
+                android:id="@+id/cashbackBalance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="1dp"
+                android:fontFamily="@font/manrope_medium"
+                android:paddingStart="@dimen/padding_6"
+                android:paddingTop="@dimen/padding_2"
+                android:paddingBottom="@dimen/padding_2"
+                android:text="@string/cashback_balance"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView5"
+                app:layout_constraintEnd_toStartOf="@+id/imageView2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rewardsHeader"
+                tools:ignore="RtlSymmetry" />
 
-                    <TextView
-                        android:id="@+id/rewardsHeader"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="3dp"
-                        android:layout_marginBottom="2dp"
-                        android:fontFamily="@font/manrope_semibold"
-                        android:padding="@dimen/padding_6"
-                        android:text="@string/your_rewards_amp_benefits"
-                        android:textColor="#888888"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toTopOf="@+id/cashbackBalance"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:contentDescription="@string/todos"
+                app:layout_constraintBottom_toBottomOf="@+id/textView5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cashbackBalance"
+                app:layout_constraintTop_toTopOf="@+id/cashbackBalance"
+                app:srcCompat="@drawable/right_arrow" />
 
-                    <TextView
-                        android:id="@+id/cashbackBalance"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="1dp"
-                        android:fontFamily="@font/manrope_medium"
-                        android:paddingStart="@dimen/padding_6"
-                        android:paddingTop="@dimen/padding_2"
-                        android:paddingBottom="@dimen/padding_2"
-                        android:text="@string/cashback_balance"
-                        android:textColor="#FFFFFF"
-                        android:textSize="14sp"
-                        app:layout_constraintBottom_toTopOf="@+id/textView5"
-                        app:layout_constraintEnd_toStartOf="@+id/imageView2"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/rewardsHeader"
-                        tools:ignore="RtlSymmetry" />
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/manrope_medium"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/padding_6"
+                android:paddingTop="@dimen/padding_1"
+                android:paddingBottom="@dimen/padding_4"
+                android:text="@string/_0"
+                android:textColor="#AFAFAF"
+                app:layout_constraintBottom_toTopOf="@+id/view"
+                app:layout_constraintEnd_toStartOf="@+id/imageView2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cashbackBalance"
+                tools:ignore="RtlSymmetry" />
 
-                    <ImageView
-                        android:id="@+id/imageView2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="0dp"
-                        android:contentDescription="@string/todos"
-                        app:layout_constraintBottom_toBottomOf="@+id/textView5"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/cashbackBalance"
-                        app:layout_constraintTop_toTopOf="@+id/cashbackBalance"
-                        app:srcCompat="@drawable/right_arrow" />
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="#555555"
+                app:layout_constraintBottom_toTopOf="@+id/imageView3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView5"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-                    <TextView
-                        android:id="@+id/textView5"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="5dp"
-                        android:fontFamily="@font/manrope_medium"
-                        android:gravity="center_vertical"
-                        android:paddingStart="@dimen/padding_6"
-                        android:paddingTop="@dimen/padding_1"
-                        android:paddingBottom="@dimen/padding_4"
-                        android:text="@string/_0"
-                        android:textColor="#AFAFAF"
-                        app:layout_constraintBottom_toTopOf="@+id/view"
-                        app:layout_constraintEnd_toStartOf="@+id/imageView2"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/cashbackBalance"
-                        tools:ignore="RtlSymmetry" />
+            <TextView
+                android:id="@+id/coins"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="1dp"
+                android:fontFamily="@font/manrope_medium"
+                android:paddingStart="@dimen/padding_6"
+                android:paddingTop="@dimen/padding_2"
+                android:paddingBottom="@dimen/padding_2"
+                android:text="@string/coins"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView6"
+                app:layout_constraintEnd_toStartOf="@+id/imageView3"
+                app:layout_constraintStart_toStartOf="@+id/view"
+                app:layout_constraintTop_toBottomOf="@+id/view"
+                tools:ignore="RtlSymmetry" />
 
-                    <View
-                        android:id="@+id/view"
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginTop="2dp"
-                        android:layout_marginBottom="2dp"
-                        android:background="#555555"
-                        app:layout_constraintBottom_toTopOf="@+id/imageView3"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="@+id/textView5"
-                        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="2dp"
+                android:background="#555555"
+                app:layout_constraintBottom_toTopOf="@+id/imageView4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView6"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
-                    <TextView
-                        android:id="@+id/coins"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="1dp"
-                        android:fontFamily="@font/manrope_medium"
-                        android:paddingStart="@dimen/padding_6"
-                        android:paddingTop="@dimen/padding_2"
-                        android:paddingBottom="@dimen/padding_2"
-                        android:text="@string/coins"
-                        android:textColor="#FFFFFF"
-                        android:textSize="14sp"
-                        app:layout_constraintBottom_toTopOf="@+id/textView6"
-                        app:layout_constraintEnd_toStartOf="@+id/imageView3"
-                        app:layout_constraintStart_toStartOf="@+id/view"
-                        app:layout_constraintTop_toBottomOf="@+id/view"
-                        tools:ignore="RtlSymmetry" />
+            <TextView
+                android:id="@+id/referEarn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/manrope_medium"
+                android:paddingStart="@dimen/padding_6"
+                android:paddingTop="@dimen/padding_2"
+                android:paddingBottom="@dimen/padding_2"
+                android:text="@string/win_upto_rs_1000"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView7"
+                app:layout_constraintEnd_toStartOf="@+id/imageView4"
+                app:layout_constraintStart_toStartOf="@+id/view2"
+                app:layout_constraintTop_toBottomOf="@+id/view2"
+                tools:ignore="RtlSymmetry" />
 
-                    <View
-                        android:id="@+id/view2"
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_marginTop="3dp"
-                        android:layout_marginBottom="2dp"
-                        android:background="#555555"
-                        app:layout_constraintBottom_toTopOf="@+id/imageView4"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="@+id/textView6"
-                        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+            <TextView
+                android:id="@+id/transactionHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_6"
+                android:layout_marginBottom="@dimen/margin_1"
+                android:fontFamily="@font/manrope_semibold"
+                android:padding="@dimen/padding_6"
+                android:text="@string/transactions_amp_support"
+                android:textColor="#888888"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/allTransactions"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView7"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
-                    <TextView
-                        android:id="@+id/referEarn"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:fontFamily="@font/manrope_medium"
-                        android:paddingStart="@dimen/padding_6"
-                        android:paddingTop="@dimen/padding_2"
-                        android:paddingBottom="@dimen/padding_2"
-                        android:text="@string/win_upto_rs_1000"
-                        android:textColor="#FFFFFF"
-                        android:textSize="14sp"
-                        app:layout_constraintBottom_toTopOf="@+id/textView7"
-                        app:layout_constraintEnd_toStartOf="@+id/imageView4"
-                        app:layout_constraintStart_toStartOf="@+id/view2"
-                        app:layout_constraintTop_toBottomOf="@+id/view2"
-                        tools:ignore="RtlSymmetry" />
+            <TextView
+                android:id="@+id/allTransactions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/manrope"
+                android:paddingStart="@dimen/padding_6"
+                android:paddingTop="@dimen/padding_1"
+                android:paddingBottom="@dimen/padding_4"
+                android:text="@string/all_transactions"
+                android:textColor="#FFFFFF"
+                app:drawableRightCompat="@drawable/right_arrow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/transactionHeader"
+                app:layout_constraintTop_toBottomOf="@+id/transactionHeader"
+                tools:ignore="RtlSymmetry" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    <TextView
-                        android:id="@+id/transactionHeader"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/margin_6"
-                        android:layout_marginBottom="@dimen/margin_1"
-                        android:fontFamily="@font/manrope_semibold"
-                        android:padding="@dimen/padding_6"
-                        android:text="@string/transactions_amp_support"
-                        android:textColor="#888888"
-                        android:textSize="12sp"
-                        android:textStyle="bold"
-                        app:layout_constraintBottom_toTopOf="@+id/allTransactions"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="@+id/textView7"
-                        app:layout_constraintTop_toBottomOf="@+id/textView7" />
-
-                    <TextView
-                        android:id="@+id/allTransactions"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/manrope"
-                        android:paddingStart="@dimen/padding_6"
-                        android:paddingTop="@dimen/padding_1"
-                        android:paddingBottom="@dimen/padding_4"
-                        android:text="@string/all_transactions"
-                        android:textColor="#FFFFFF"
-                        app:drawableRightCompat="@drawable/right_arrow"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="@+id/transactionHeader"
-                        app:layout_constraintTop_toBottomOf="@+id/transactionHeader"
-                        tools:ignore="RtlSymmetry" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </LinearLayout>
-
-        </LinearLayout>
-    </ScrollView>
+    </LinearLayout>
 
 </LinearLayout>
+
+

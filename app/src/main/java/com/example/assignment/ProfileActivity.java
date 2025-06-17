@@ -7,8 +7,11 @@ import android.view.WindowManager;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
-public class ProfileActivity extends AppCompatActivity {
+import com.facebook.shimmer.Shimmer;
+import com.facebook.shimmer.ShimmerFrameLayout;
 
+public class ProfileActivity extends AppCompatActivity {
+    private ShimmerFrameLayout shimmerFrameLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +21,34 @@ public class ProfileActivity extends AppCompatActivity {
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.setStatusBarColor(ContextCompat.getColor(this, R.color.my_status_bar_color));
+        shimmerFrameLayout = findViewById(R.id.view7);
 
+        Shimmer shimmer = new Shimmer.ColorHighlightBuilder()
+                .setBaseColor(0x000000)
+                .setHighlightColor(0xCCFFFFFF)
+                .setDirection(Shimmer.Direction.LEFT_TO_RIGHT)
+                .setTilt(-20f)
+                .setDuration(3000)
+                .setIntensity(0.05f)
+                .setDropoff(0.05f)
+                .setRepeatCount(0)
+                .build();
+
+        ShimmerFrameLayout shimmerCredit = findViewById(R.id.view7);
+        shimmerCredit.setShimmer(shimmer);
+        shimmerCredit.startShimmer();
     }
+
+    @Override
+    protected void onPause() {
+        shimmerFrameLayout.stopShimmer(); // to prevent leaks
+        super.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        shimmerFrameLayout.startShimmer();
+        super.onResume();
+    }
+
 }
