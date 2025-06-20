@@ -10,11 +10,13 @@ import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Patterns;
 import android.view.View;
+import android.view.Window;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.content.ContextCompat;
@@ -48,6 +50,10 @@ public class LoginActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
+        Window window = getWindow();
+        // Make sure icons are white
+        window.getDecorView().setSystemUiVisibility(0);
+
         loadingOverlay = findViewById(R.id.loadingOverlay);
         lottieLoadingView = findViewById(R.id.lottieLoadingView);
 
@@ -95,7 +101,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        // Allow switching back from phone to email
+        // Allow for switching back from phone to email
         editTextPhoneNumber.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -131,16 +137,26 @@ public class LoginActivity extends AppCompatActivity {
                     new Handler().postDelayed(() -> {
                         shimmerFrameLayout.stopShimmer();
                         shimmerFrameLayout.setVisibility(View.GONE);
-                        startActivity(new Intent(LoginActivity.this, ProfileActivity.class));
+                        startActivity(new Intent(LoginActivity.this, UserDetailsActivity.class));
                         Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
 
                         finish();
-                    }, 2000);
+                    }, 2200);
                     //  startActivity(new Intent(LoginActivity.this, ProfileActivity.class));
                 }
 
             }
         });
+
+
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                // Exit the app completely
+                finishAffinity(); // Or use finishAndRemoveTask();
+            }
+        });
+
     }
 
     private void showPhoneField(String number) {

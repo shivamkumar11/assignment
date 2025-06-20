@@ -1,12 +1,14 @@
 package com.example.assignment;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 import androidx.activity.OnBackPressedCallback;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.content.ContextCompat;
 
 import com.facebook.shimmer.Shimmer;
@@ -19,10 +21,13 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_profile);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        }
         Window window = getWindow();
-        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        window.setStatusBarColor(ContextCompat.getColor(this, R.color.my_status_bar_color));
+
+        // Make sure icons are white
+        window.getDecorView().setSystemUiVisibility(0);
 
 
         Shimmer shimmer = new Shimmer.ColorHighlightBuilder()
