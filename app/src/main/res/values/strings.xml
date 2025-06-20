@@ -74,6 +74,11 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="login">LOGIN</string>
+    <string name="number_or_email">Number or Email</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="nexts">Next</string>
+    <string name="enter_phone_number">Enter phone number</string>
 
 
 </resources>
