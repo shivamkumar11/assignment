@@ -4,18 +4,23 @@ junit = "4.13.2"
 junitVersion = "1.1.5"
 espressoCore = "3.5.1"
 appcompat = "1.6.1"
+libphonenumber = "8.13.24"
 material = "1.10.0"
 activity = "1.8.0"
 constraintlayout = "2.1.4"
 shimmer = "0.5.0"
 navigationFragment = "2.6.0"
 navigationUi = "2.6.0"
+ccp = "2.5.3"
 
 [libraries]
+lottie = { group = "com.airbnb.android", name = "lottie", version = "6.4.0" }
+ccp = { group = "com.hbb20", name = "ccp", version.ref = "ccp" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+libphonenumber = { module = "com.googlecode.libphonenumber:libphonenumber", version.ref = "libphonenumber" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }

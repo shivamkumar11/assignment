@@ -1,8 +1,10 @@
 package com.example.assignment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
+import androidx.activity.OnBackPressedCallback;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -37,6 +39,14 @@ public class ProfileActivity extends AppCompatActivity {
         shimmerFrameLayout = findViewById(R.id.view7);
         shimmerFrameLayout.setShimmer(shimmer);
         shimmerFrameLayout.startShimmer();
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                Intent intent = new Intent(ProfileActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
     @Override
@@ -50,5 +60,7 @@ public class ProfileActivity extends AppCompatActivity {
         shimmerFrameLayout.startShimmer();
         super.onResume();
     }
+
+
 
 }

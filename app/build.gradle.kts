@@ -35,6 +35,9 @@ android {
 }
 
 dependencies {
+    implementation(libs.lottie)
+    implementation (libs.libphonenumber)
+    implementation(libs.ccp)
     implementation (libs.shimmer)
     implementation(libs.appcompat)
     implementation(libs.material)
